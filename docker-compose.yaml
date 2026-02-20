@@ -1,0 +1,25 @@
+services:
+  luna:
+    build:
+      dockerfile: ./Dockerfile
+      context: ./
+    depends_on:
+      - pg
+    ports:
+      - "8000:8000"
+  pg:
+    image: postgres:16.10
+    environment:
+      POSTGRES_DB: LunaDB
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: Uslovny_password
+    ports:
+      - "5432:5432"
+  pgadmin:
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: sik2001sasha@gmail.com
+      PGADMIN_DEFAULT_PASSWORD: Uslovny_password
+      PGADMIN_CONFIG: 'False'
+    ports:
+      - "80:80"

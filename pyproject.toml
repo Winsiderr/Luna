@@ -1,0 +1,27 @@
+[project]
+name = "luna"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Your Name",email = "you@example.com"}
+]
+requires-python = ">=3.12"
+dependencies = [
+    "sqlalchemy (>=2.0.46,<3.0.0)",
+    "fastapi[standart] (>=0.129.0,<0.130.0)",
+    "alembic (>=1.18.4,<2.0.0)",
+    "docker (>=7.1.0,<8.0.0)",
+    "pydantic (>=2.12.5,<3.0.0)",
+    "pydantic-settings (>=2.13.0,<3.0.0)",
+    "uvicorn (>=0.40.0,<0.41.0)",
+    "pydantic-extra-types (>=2.11.0,<3.0.0)",
+    "router (>=0.1,<0.2)",
+    "context-async-sqlalchemy (>=2.1.6,<3.0.0)",
+    "psycopg2 (>=2.9.11,<3.0.0)",
+    "phonenumbers (>=9.0.24,<10.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
